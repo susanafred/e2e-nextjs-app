@@ -5,6 +5,10 @@
 /.pnp
 .pnp.js
 
+#Credentials
+/tekton/base/git-credentials.yaml
+/tekton/base/susanafred-quay-io-credentials-secret.yml
+
 # testing
 /coverage
 
