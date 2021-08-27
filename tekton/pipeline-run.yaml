@@ -1,16 +1,16 @@
 apiVersion: tekton.dev/v1beta1
 kind: PipelineRun
 metadata:
-  generateName: susana-e2e-pipeline-run-
+  generateName: susana-pipeline-run-
 spec:
   serviceAccountName: build-bot
   params:
     - name: source-repo
       value: https://github.com/susanafred/e2e-nextjs-app.git
     - name: image-repo
-      value: quay.io/susanafred/express-sample-app
+      value: quay.io/susanafred/e2e-assignment-app
     - name: app-name
-      value: express-sample-app
+      value: e2e-assignment-app
   pipelineRef:
     name: e2e-pipeline
   workspaces:

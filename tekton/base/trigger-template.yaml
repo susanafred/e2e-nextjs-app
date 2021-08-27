@@ -10,15 +10,15 @@ spec:
         generateName: susana-pipeline-run-
       spec:
         pipelineRef:
-          name: kustom-pipeline
+          name: e2e-pipeline
         serviceAccountName: build-bot
         params:
           - name: app-name
-            value: express-sample-app
+            value: e2e-assignment-app
           - name: source-repo
-            value: https://github.com/susanafred/kustomize-assignment-app.git
+            value: https://github.com/susanafred/e2e-nextjs-app.git
           - name: image-repo
-            value: quay.io/susanafred/express-sample-app
+            value: quay.io/susanafred/e2e-assignment-app
         workspaces:
           - name: pipeline-shared-data
             volumeClaimTemplate:
